@@ -37,7 +37,7 @@ function Optimize-WindowsFeaturesList() {
         Set-OptionalFeatureState -State 'Disabled' -OptionalFeatures $DisableFeatures
     }
 
-    If ($array.Length -ne 0) {
+    If ($EnableFeatures.Length -ne 0) {
         Write-Section "Install Optional Features from Windows"
         Set-OptionalFeatureState -State 'Enabled' -OptionalFeatures $EnableFeatures
     }
